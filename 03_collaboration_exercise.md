@@ -45,7 +45,7 @@ git commit -m "Added a line by Alice"
 
 # 5. Push the branch to GitHub
 git push origin feature-alice
-
+```
 ---
 
 ### 👩‍💻 Bob’s Tasks – Update Main Branch
@@ -64,7 +64,7 @@ git commit -m "Bob's update to main"
 
 # 4. Push to main branch
 git push origin main
-
+```
 ---
 
 ### 👩‍💻 Alice Merges Main into Her Branch
@@ -82,4 +82,4 @@ git commit -m "Merged main into feature-alice"
 
 # 4. Push the updated feature branch
 git push origin feature-alice
-
+```
