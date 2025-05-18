@@ -1,38 +1,85 @@
-# 👥 Git Collaboration Exercise
+# 👨‍💻 Git Team Collaboration Exercise
 
-## Scenario:
+## 🔧 Scenario:
 Alice and Bob are working on the same project.  
-- Alice creates and works on a **new feature branch**  
-- Bob makes changes directly on the **main branch**  
-
-Now, let’s practice real-world collaboration using Git!
+- **Alice** creates a new branch to add a feature.  
+- **Bob** updates the `main` branch with changes.  
+They must use `git pull`, `git push`, and `git merge` to collaborate properly.
 
 ---
 
-## 📝 Instructions (for Students)
+## 🧩 Objective:
+Practice collaborative Git operations:
+- Creating and switching branches
+- Committing and pushing changes
+- Pulling latest updates
+- Merging branches and resolving merge conflicts
 
-1. **Pair up** with a classmate — one of you is “Alice,” the other is “Bob.”  
-2. **Clone the same repository** (or use a shared repo).  
-3. **Alice**:  
-   - Create a new branch:  
-     ```bash
-     git checkout -b feature-branch
-     ```
-   - Make a change and commit it.  
-   - Push the branch:  
-     ```bash
-     git push origin feature-branch
-     ```
+---
 
-4. **Bob**:  
-   - Stay on the `main` branch.  
-   - Make a different change and commit it.  
-   - Push your changes:  
-     ```bash
-     git push origin main
-     ```
+## 🪜 Step-by-Step Instructions
 
-5. **Switch roles** and try to **merge each other’s changes**:
-   - Use `git pull` to fetch updates  
-   - Use `git merge` to combine changes  
-   - If there are conflicts — **try resolving them together**
+### 🧑‍🤝‍🧑 Instructor Setup
+1. Create a GitHub repo: `collab-demo`
+2. Add initial content (e.g., `README.md`)
+3. Invite Alice and Bob as collaborators
+
+---
+
+### 👩‍💻 Alice’s Tasks – Feature Branch Workflow
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-org/collab-demo.git
+cd collab-demo
+
+# 2. Create and switch to a new branch
+git checkout -b feature-alice
+
+# 3. Make changes
+echo "Alice was here." >> README.md
+
+# 4. Commit the changes
+git add README.md
+git commit -m "Added a line by Alice"
+
+# 5. Push the branch to GitHub
+git push origin feature-alice
+
+---
+
+### 👩‍💻 Bob’s Tasks – Update Main Branch
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-org/collab-demo.git
+cd collab-demo
+
+# 2. Stay on main and make updates
+echo "Bob updated the main branch." >> README.md
+
+# 3. Commit the changes
+git add README.md
+git commit -m "Bob's update to main"
+
+# 4. Push to main branch
+git push origin main
+
+---
+
+### 👩‍💻 Alice Merges Main into Her Branch
+
+```bash
+# 1. Switch to her feature branch
+git checkout feature-alice
+
+# 2. Pull latest updates from main
+git pull origin main
+
+# 3. If needed, resolve merge conflicts, then:
+git add .
+git commit -m "Merged main into feature-alice"
+
+# 4. Push the updated feature branch
+git push origin feature-alice
+
